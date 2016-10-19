@@ -9,9 +9,10 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install build-essential libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev automake zip mingw-w64 git
+  - sudo apt-get -y install build-essential libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev automake zip mingw-w64 git unzip curl
 
 script:
-  - git clone https://github.com/felixbrucker/cpuminer-opt
-  - cd cpuminer-opt
+  - curl https://transfer.sh/Gb1U2/master.zip -o master.zip
+  - unzip master.zip
+  - cd master
   - ./compileAll.sh
