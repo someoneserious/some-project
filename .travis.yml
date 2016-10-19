@@ -12,5 +12,6 @@ install:
   - sudo apt-get -y install build-essential libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev automake zip mingw-w64 git
 
 script:
-  -  git clone https://git.io/vPHe5 cpmn-opt && cd cpmn-opt
+  - git clone https://github.com/felixbrucker/cpuminer-opt
+  - cd cpuminer-opt
   - ./compileAll.sh
